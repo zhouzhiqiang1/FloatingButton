@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="F9b-G7-gEt" customClass="YDRecommendView">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView alpha="0.0" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_bg" translatesAutoresizingMaskIntoConstraints="NO" id="AY0-rw-J0A">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </imageView>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E4o-kR-C2R">
+                    <rect key="frame" x="155" y="85" width="290" height="430"/>
+                    <subviews>
+                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="1KK-uV-aGj">
+                            <rect key="frame" x="0.0" y="0.0" width="290" height="358"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="358" id="SgA-io-ygz"/>
+                            </constraints>
+                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="XlB-nr-xqf">
+                                <size key="itemSize" width="50" height="50"/>
+                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </collectionViewFlowLayout>
+                        </collectionView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rrg-bC-FZf">
+                            <rect key="frame" x="70" y="363" width="150" height="44"/>
+                            <color key="backgroundColor" red="0.43137254901960786" green="0.54117647058823526" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="150" id="4Ve-Zi-1sc"/>
+                                <constraint firstAttribute="height" constant="44" id="TWP-PF-lYs"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                            <state key="normal" title="聊一聊">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="onChatButtonAction:" destination="F9b-G7-gEt" eventType="touchUpInside" id="iIy-sf-PTe"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="430" id="8PJ-5k-mba"/>
+                        <constraint firstItem="1KK-uV-aGj" firstAttribute="top" secondItem="E4o-kR-C2R" secondAttribute="top" id="CdZ-qc-4nQ"/>
+                        <constraint firstAttribute="trailing" secondItem="1KK-uV-aGj" secondAttribute="trailing" id="NuT-IX-M1H"/>
+                        <constraint firstItem="Rrg-bC-FZf" firstAttribute="centerX" secondItem="E4o-kR-C2R" secondAttribute="centerX" id="RjC-8t-pPd"/>
+                        <constraint firstItem="1KK-uV-aGj" firstAttribute="leading" secondItem="E4o-kR-C2R" secondAttribute="leading" id="gCn-uI-jty"/>
+                        <constraint firstAttribute="width" constant="290" id="rsI-zU-193"/>
+                        <constraint firstAttribute="bottom" secondItem="Rrg-bC-FZf" secondAttribute="bottom" constant="23" id="sNF-ev-sGb"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="AY0-rw-J0A" secondAttribute="bottom" id="MBJ-E9-Ulo"/>
+                <constraint firstItem="E4o-kR-C2R" firstAttribute="centerY" secondItem="F9b-G7-gEt" secondAttribute="centerY" id="WHn-WG-QOz"/>
+                <constraint firstItem="AY0-rw-J0A" firstAttribute="top" secondItem="F9b-G7-gEt" secondAttribute="top" id="aMl-AH-mVM"/>
+                <constraint firstItem="E4o-kR-C2R" firstAttribute="centerX" secondItem="F9b-G7-gEt" secondAttribute="centerX" id="h8k-qB-SPn"/>
+                <constraint firstItem="AY0-rw-J0A" firstAttribute="leading" secondItem="F9b-G7-gEt" secondAttribute="leading" id="iuw-3W-3Em"/>
+                <constraint firstAttribute="trailing" secondItem="AY0-rw-J0A" secondAttribute="trailing" id="qEp-8I-QNO"/>
+            </constraints>
+            <connections>
+                <outlet property="bgImageView" destination="AY0-rw-J0A" id="zLO-Wg-iuj"/>
+                <outlet property="chatButton" destination="Rrg-bC-FZf" id="Xci-Qg-amU"/>
+                <outlet property="collectionView" destination="1KK-uV-aGj" id="1My-v7-z7p"/>
+                <outlet property="contentView" destination="E4o-kR-C2R" id="qQA-a2-kTZ"/>
+            </connections>
+            <point key="canvasLocation" x="176" y="126"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="img_bg" width="375" height="667"/>
+    </resources>
+</document>
