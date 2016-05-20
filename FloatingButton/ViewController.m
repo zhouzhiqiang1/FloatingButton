@@ -29,7 +29,10 @@
 }
 
 - (IBAction)onFloatingBtnAction:(id)sender {
-    ZZQFloatingViewController * floatingView = [[ZZQFloatingViewController alloc] init];
+    
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    
+    ZZQFloatingViewController * floatingView = [storyboard instantiateViewControllerWithIdentifier:@"ZZQFloatingViewController"];
     
     [self.navigationController pushViewController:floatingView animated:YES];
     
